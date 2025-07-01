@@ -1,7 +1,7 @@
 {
   "name": "My Shopping List",
   "short_name": "MyShoppingApp",
-  "start_url": "index.html",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#dc3545",
