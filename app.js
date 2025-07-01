@@ -1,5 +1,5 @@
 document.getElementById('addbutton').addEventListener('click', addToCart);
-document.getElementById('showbutton').addEventListener('click', show);
+document.getElementById('reset').addEventListener('click', resetCart);
 
 let cart = JSON.parse(localStorage.getItem('cart1')) || [];
 
@@ -18,17 +18,19 @@ function addToCart() {
 }
 
 function show() {
-  let viewArea = document.getElementById('viewArea');
+  let viewArea = document.getElementById('data');
   viewArea.innerHTML = "";
 
   let savedCart = JSON.parse(localStorage.getItem('cart1')) || [];
   savedCart.forEach((item, index) => {
     viewArea.innerHTML += `
-      <div class="col-4 border">${item.product}</div>
-      <div class="col-1 border">${item.quantity}</div>
-      <div class="col-2 border">UGX ${item.price}</div>
-      <div class="col-2 border">UGX ${item.t_cost}</div>
-      <button class="col-1 btn btn-warning" onclick="removeItem(${index})">&times;</button>
+     </tr>
+      <td class="product">${item.product}</td>
+      <td class="quantity cent">${item.quantity}</td>
+      <td class="price">UGX ${item.price}</td>
+      <td class="cost">UGX ${item.t_cost}</td>
+      <td class="del-btn cent" id="deletebtn" onclick="removeItem(${index})">&times;</td>
+     </tr>
     `;
   });
 }
@@ -41,7 +43,13 @@ function removeItem(index) {
 }
 
 function resetCart() {
+ confirm('This will delete everything in the cart')
+ if(true) {
   localStorage.removeItem('cart1');
   cart = [];
   show();
+ }
+  
 }
+
+window.addEventListener('load',show)
