@@ -7,8 +7,8 @@ self.addEventListener("install", e => {
         "/style.css",
         "/app.js",
         "/manifest.json",
-        "/icon-192.png",
-        "/icon-512.png"
+        "/autumn2.jpg",
+        "/autumn3.jpg"
       ]);
     })
   );
