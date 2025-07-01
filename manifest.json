@@ -7,12 +7,12 @@
   "theme_color": "#dc3545",
   "icons": [
     {
-      "src": "https://i.postimg.cc/Wbpg747H/Tashigi.jpg",
+      "src": "autumn2.jpg",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://i.postimg.cc/FHY09y3M/342415010829070.jpg",
+      "src": "autumn3.jpg",
       "sizes": "512x512",
       "type": "image/png"
     }
